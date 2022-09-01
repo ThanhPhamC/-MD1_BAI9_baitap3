@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            display: flex;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        tr,td{
+            font-size: 10px ;
+            text-align: center;
+}
+        .hinhanh{
+            font-size: x-large;
+            color: #1e1eff;
+        }
+    </style>
+</head>
+<body>
+<table border="1" style="width: 300px; height: 300px ;border-spacing:10px" >
+    <tr>
+        <td colspan="4" height="50px" class="hinhanh"  >
+            <input id="daura" value="">
+        </td>
+    </tr>
+    <div >
+    <tr>
+        <td> <button onclick="number('1')" class="hinhanh" >1</button> </td>
+        <td> <button onclick="number('2')" class="hinhanh" >2</button></td>
+        <td> <button onclick="number('3')" class="hinhanh">3</button></td>
+        <td> <button onclick="number('+')" class="hinhanh">+</button></td>
+    </tr>
+    <tr>
+        <td> <button onclick="number('4')" class="hinhanh">4</button></td>
+        <td> <button onclick="number('5')" class="hinhanh">5</button></td>
+        <td> <button onclick="number('6')" class="hinhanh">6</button></td>
+        <td> <button onclick="number('-')" class="hinhanh">-</button></td>
+    </tr>
+    <tr>
+        <td> <button onclick="number('7')" class="hinhanh">7</button></td>
+        <td> <button onclick="number('8')" class="hinhanh">8</button></td>
+        <td> <button onclick="number('9')" class="hinhanh">9</button></td>
+        <td> <button onclick="number('*')" class="hinhanh">*</button></td>
+    </tr>
+    <tr>
+        <td> <button onclick="xoa('')" class="hinhanh">c</button></td>
+        <td> <button onclick="number('0')" class="hinhanh">0</button></td>
+        <td> <button onclick="ketqua('')" class="hinhanh">=</button></td>
+        <td> <button onclick="number('/')" class="hinhanh">/</button></td>
+    </tr>
+    </div>
+</table>
+<script>
+    function number(a) {
+        document.getElementById("daura").value+=a;
+    }
+    function xoa() {
+        document.getElementById("daura").value="";
+        }
+    function ketqua() {
+        let b= document.getElementById("daura").value;
+        let ketQua=eval(b);
+        document.getElementById("daura").value=ketQua;
+
+    }
+</script>
+</body>
+</html>
